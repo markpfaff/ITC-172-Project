@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="STLoginService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:52845/STLoginService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:52845/STLoginService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:52845/STLoginService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+      <xsd:import schemaLocation="http://localhost:52845/STLoginService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISTLoginService_VenueLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:VenueLogin" />
+  </wsdl:message>
+  <wsdl:message name="ISTLoginService_VenueLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VenueLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISTLoginService_VenueRegistration_InputMessage">
+    <wsdl:part name="parameters" element="tns:VenueRegistration" />
+  </wsdl:message>
+  <wsdl:message name="ISTLoginService_VenueRegistration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VenueRegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISTLoginService_AddArtist_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddArtist" />
+  </wsdl:message>
+  <wsdl:message name="ISTLoginService_AddArtist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddArtistResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISTLoginService_AddShow_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddShow" />
+  </wsdl:message>
+  <wsdl:message name="ISTLoginService_AddShow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddShowResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISTLoginService_AddShowDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddShowDetail" />
+  </wsdl:message>
+  <wsdl:message name="ISTLoginService_AddShowDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddShowDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISTLoginService_GetArtists_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetArtists" />
+  </wsdl:message>
+  <wsdl:message name="ISTLoginService_GetArtists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetArtistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISTLoginService_FanLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:FanLogin" />
+  </wsdl:message>
+  <wsdl:message name="ISTLoginService_FanLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FanLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISTLoginService_FanRegistration_InputMessage">
+    <wsdl:part name="parameters" element="tns:FanRegistration" />
+  </wsdl:message>
+  <wsdl:message name="ISTLoginService_FanRegistration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FanRegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISTLoginService_AddFanArtist_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddFanArtist" />
+  </wsdl:message>
+  <wsdl:message name="ISTLoginService_AddFanArtist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddFanArtistResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISTLoginService_GetVenues_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVenues" />
+  </wsdl:message>
+  <wsdl:message name="ISTLoginService_GetVenues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVenuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISTLoginService_GetShows_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShows" />
+  </wsdl:message>
+  <wsdl:message name="ISTLoginService_GetShows_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShowsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISTLoginService_GetShowByVenue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShowByVenue" />
+  </wsdl:message>
+  <wsdl:message name="ISTLoginService_GetShowByVenue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShowByVenueResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISTLoginService_GetShowByArtist_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShowByArtist" />
+  </wsdl:message>
+  <wsdl:message name="ISTLoginService_GetShowByArtist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShowByArtistResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISTLoginService">
+    <wsdl:operation name="VenueLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISTLoginService/VenueLogin" message="tns:ISTLoginService_VenueLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISTLoginService/VenueLoginResponse" message="tns:ISTLoginService_VenueLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VenueRegistration">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISTLoginService/VenueRegistration" message="tns:ISTLoginService_VenueRegistration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISTLoginService/VenueRegistrationResponse" message="tns:ISTLoginService_VenueRegistration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddArtist">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISTLoginService/AddArtist" message="tns:ISTLoginService_AddArtist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISTLoginService/AddArtistResponse" message="tns:ISTLoginService_AddArtist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddShow">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISTLoginService/AddShow" message="tns:ISTLoginService_AddShow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISTLoginService/AddShowResponse" message="tns:ISTLoginService_AddShow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddShowDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISTLoginService/AddShowDetail" message="tns:ISTLoginService_AddShowDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISTLoginService/AddShowDetailResponse" message="tns:ISTLoginService_AddShowDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetArtists">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISTLoginService/GetArtists" message="tns:ISTLoginService_GetArtists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISTLoginService/GetArtistsResponse" message="tns:ISTLoginService_GetArtists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FanLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISTLoginService/FanLogin" message="tns:ISTLoginService_FanLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISTLoginService/FanLoginResponse" message="tns:ISTLoginService_FanLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FanRegistration">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISTLoginService/FanRegistration" message="tns:ISTLoginService_FanRegistration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISTLoginService/FanRegistrationResponse" message="tns:ISTLoginService_FanRegistration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddFanArtist">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISTLoginService/AddFanArtist" message="tns:ISTLoginService_AddFanArtist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISTLoginService/AddFanArtistResponse" message="tns:ISTLoginService_AddFanArtist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVenues">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISTLoginService/GetVenues" message="tns:ISTLoginService_GetVenues_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISTLoginService/GetVenuesResponse" message="tns:ISTLoginService_GetVenues_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShows">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISTLoginService/GetShows" message="tns:ISTLoginService_GetShows_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISTLoginService/GetShowsResponse" message="tns:ISTLoginService_GetShows_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShowByVenue">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISTLoginService/GetShowByVenue" message="tns:ISTLoginService_GetShowByVenue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISTLoginService/GetShowByVenueResponse" message="tns:ISTLoginService_GetShowByVenue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShowByArtist">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISTLoginService/GetShowByArtist" message="tns:ISTLoginService_GetShowByArtist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISTLoginService/GetShowByArtistResponse" message="tns:ISTLoginService_GetShowByArtist_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISTLoginService" type="tns:ISTLoginService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="VenueLogin">
+      <soap:operation soapAction="http://tempuri.org/ISTLoginService/VenueLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VenueRegistration">
+      <soap:operation soapAction="http://tempuri.org/ISTLoginService/VenueRegistration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddArtist">
+      <soap:operation soapAction="http://tempuri.org/ISTLoginService/AddArtist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddShow">
+      <soap:operation soapAction="http://tempuri.org/ISTLoginService/AddShow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddShowDetail">
+      <soap:operation soapAction="http://tempuri.org/ISTLoginService/AddShowDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetArtists">
+      <soap:operation soapAction="http://tempuri.org/ISTLoginService/GetArtists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FanLogin">
+      <soap:operation soapAction="http://tempuri.org/ISTLoginService/FanLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FanRegistration">
+      <soap:operation soapAction="http://tempuri.org/ISTLoginService/FanRegistration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFanArtist">
+      <soap:operation soapAction="http://tempuri.org/ISTLoginService/AddFanArtist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVenues">
+      <soap:operation soapAction="http://tempuri.org/ISTLoginService/GetVenues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShows">
+      <soap:operation soapAction="http://tempuri.org/ISTLoginService/GetShows" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShowByVenue">
+      <soap:operation soapAction="http://tempuri.org/ISTLoginService/GetShowByVenue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShowByArtist">
+      <soap:operation soapAction="http://tempuri.org/ISTLoginService/GetShowByArtist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="STLoginService">
+    <wsdl:port name="BasicHttpBinding_ISTLoginService" binding="tns:BasicHttpBinding_ISTLoginService">
+      <soap:address location="http://localhost:52845/STLoginService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
